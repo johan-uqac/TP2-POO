@@ -16,7 +16,6 @@ class Vehicle {
    * @param modele The model of the vehicle
    * @param annee The year of the vehicle
    * @param type The type of the vehicle
-   * @return A new Vehicle object
    */
   Vehicle(const std::string& plaque, const std::string& modele,
           const std::string& annee, const std::string& type);

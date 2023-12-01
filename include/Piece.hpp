@@ -17,17 +17,18 @@ class Piece : public Produit {
    * @param nom The name of the piece
    * @param prix The price of the piece
    * @param quantite_depot The quantity of the piece in the depot
-   * @return A new Piece object
    */
   Piece(const std::string& nom, double prix, int quantite_depot);
 
   /**
    * @brief Add a quantity of piece to the depot
+   * @param quantite The quantity of piece to add
    */
   void ajouter_piece_depot(int quantite);
 
   /**
    * @brief Remove a quantity of piece from the depot
+   * @param quantite The quantity of piece to remove
    */
   void soustraire_piece_depot(int quantite);
 

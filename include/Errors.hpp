@@ -13,7 +13,6 @@ class FactureFinaliseeException : public std::exception {
   /**
    * @brief Construct a new FactureFinaliseeException object
    * @param message The message of the exception
-   * @return A new FactureFinaliseeException object
    */
   FactureFinaliseeException(const std::string &message);
 
@@ -43,7 +42,6 @@ class FacturePasFinaliseeException : public std::exception {
   /**
    * @brief Construct a new FacturePasFinaliseeException object
    * @param message The message of the exception
-   * @return A new FacturePasFinaliseeException object
    */
   FacturePasFinaliseeException(const std::string &message);
 

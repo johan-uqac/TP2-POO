@@ -14,7 +14,6 @@ class Client {
    * @param nom The name of the client
    * @param adresse The address of the client
    * @param phone The phone number of the client
-   * @return A new Client object
    */
   Client(const std::string& nom, const std::string& adresse,
          const std::string& phone);

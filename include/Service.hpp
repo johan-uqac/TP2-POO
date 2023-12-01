@@ -18,7 +18,6 @@ class Service : public Produit {
    * @param nom The name of the service
    * @param prix The price of the service
    * @param temps_execution The execution time of the service
-   * @return A new Service object
    */
   Service(const std::string& nom, double prix, double temps_execution);
 
@@ -28,7 +27,6 @@ class Service : public Produit {
    * @param prix The price of the service
    * @param temps_execution The execution time of the service
    * @param description The description of the service
-   * @return A new Service object
    */
   Service(const std::string& nom, double prix, double temps_execution,
           const std::string& description);

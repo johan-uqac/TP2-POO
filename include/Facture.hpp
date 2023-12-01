@@ -17,7 +17,6 @@ class Facture {
   /**
    * @brief Construct a new Facture object
    * @param date_facture The date of the facture
-   * @return A new Facture object
    */
   Facture(const std::string &date_facture);
 
@@ -25,7 +24,6 @@ class Facture {
    * @brief Construct a new Facture object
    * @param client The client of the facture
    * @param date_facture The date of the facture
-   * @return A new Facture object
    * @see Client
    */
   Facture(Client *client, const std::string &date_facture);
@@ -35,7 +33,6 @@ class Facture {
    * @param client The client of the facture
    * @param vehicle The vehicle of the facture
    * @param date_facture The date of the facture
-   * @return A new Facture object
    * @see Vehicle
    * @see Client
    */
@@ -86,12 +83,14 @@ class Facture {
 
   /**
    * @brief Sets the client linked to the facture
+   * @param client The new client linked to the facture
    * @see Client
    */
   void set_client(Client *client);
 
   /**
    * @brief Sets the vehicle linked to the facture
+   * @param vehicle The new vehicle linked to the facture
    * @see Vehicle
    */
   void set_vehicle(Vehicle *vehicle);
