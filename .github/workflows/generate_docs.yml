@@ -15,7 +15,7 @@ jobs:
           sudo apt-get install -y doxygen
 
       - name: Generate documentation
-        run: doxygen Doxyfile
+        run: mkdir docs && mkdir docs/output && doxygen Doxyfile
 
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
