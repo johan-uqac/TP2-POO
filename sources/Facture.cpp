@@ -32,12 +32,14 @@ Facture::Facture(Client *client, Vehicle *vehicle,
 }
 
 void Facture::ajouter_produit(Produit *produit, int quantite) {
-  if (_status == 1) throw FactureFinaliseeException();
+  if (_status == 1)
+    throw FactureFinaliseeException("La facture a déjà été finalisée");
   _produits.push_back(ProduitFacture(produit, quantite));
 }
 
 void Facture::ajouter_produit(ProduitFacture *produit_facture) {
-  if (_status == 1) throw FactureFinaliseeException();
+  if (_status == 1)
+    throw FactureFinaliseeException("La facture a déjà été finalisée");
   _produits.push_back(*produit_facture);
 }
 
@@ -70,7 +72,8 @@ double Facture::calculer_balance() const {
 }
 
 void Facture::finaliser_facture() {
-  if (_status == 1) throw FactureFinaliseeException();
+  if (_status == 1)
+    throw FactureFinaliseeException("La facture a déjà été finalisée");
   _balance = calculer_balance();
   _status = 1;
   for (auto &produit : _produits) {
@@ -85,18 +88,22 @@ void Facture::finaliser_facture() {
 }
 
 void Facture::enregistrer_facture() const {
-  if (_status == 0) throw FacturePasFinaliseeException();
+  if (_status == 0)
+    throw FacturePasFinaliseeException(
+        "La facture doit être finalisée avant le registre");
   std::ofstream fichier("facture_" + std::to_string(_id) + ".txt");
   afficher_facture(fichier);
   fichier.close();
 }
 
 void Facture::set_client(Client *client) {
-  if (_status == 1) throw FactureFinaliseeException();
+  if (_status == 1)
+    throw FactureFinaliseeException("La facture a déjà été finalisée");
   _client = client;
 }
 
 void Facture::set_vehicle(Vehicle *vehicle) {
-  if (_status == 1) throw FactureFinaliseeException();
+  if (_status == 1)
+    throw FactureFinaliseeException("La facture a déjà été finalisée");
   _vehicle = vehicle;
 }

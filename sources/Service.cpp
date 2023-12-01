@@ -21,3 +21,9 @@ void Service::afficher() const {
 double Service::calculer_prix() const { return get_prix() * _temps_execution; }
 
 char Service::get_type_produit() const { return 'S'; }
+
+const std::string& Service::get_description() const { return _description; }
+
+void Service::set_description(const std::string& description) {
+  _description = description;
+}
