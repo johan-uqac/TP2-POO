@@ -12,7 +12,7 @@ jobs:
       - name: Install requirements
         run: |
           sudo apt-get update
-          sudo apt-get install -y doxygen texlive-latex texlive-collection-latexextra
+          sudo apt-get install -y doxygen
 
       - name: Generate documentation
         run: doxygen Doxyfile
